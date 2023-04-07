@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+    <form [formGroup]="addproject">
+        <div class="a">
+        <mat-form-field>
+            <mat-label>Project name</mat-label>
+            <input type="text" matInput formControlName="ProjectName">
+            <mat-error *ngIf="addproject.get('ProjectName')?.hasError('required')">required</mat-error>
+        </mat-form-field></div>
+        <div>
+        <mat-form-field>
+            <mat-label>State date</mat-label>
+            <input matInput formControlName="StartDate" type="date">
+        </mat-form-field></div> 
+        <div>
+        <mat-form-field>
+            <mat-label>Status of the Project</mat-label>
+            <input type="text" matInput formControlName="StatusoftheProject">
+        </mat-form-field></div>
+        <div>
+        <mat-form-field>
+            <mat-label>Assigned By</mat-label>
+            <input type="text" matInput formControlName="AssignedBy">
+        </mat-form-field></div>
+        <div>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input type="text" matInput formControlName="Description">
+        </mat-form-field></div>
+    </form>
+    <button mat-raised-button color="primary" [mat-dialog-close]="addproject.value" (click)="save()">save</button>
+</div>
+    </div>

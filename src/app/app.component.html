@@ -1,0 +1,56 @@
+<mat-toolbar class="heading" *ngIf="isLogin">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon >menu</mat-icon>
+      </button> PROJECT MANAGEMENT
+      <span class="toolbar-spacer"></span>
+      <div class="d-flex justify-content-end">
+     
+        <mat-button mat-stroked-button [matMenuTriggerFor]="setting">
+          <mat-icon>settings</mat-icon>
+          <mat-menu #setting="matMenu">
+            <button mat-menu-item routerLink="/auth-module/loginpage">
+              <mat-icon>logout</mat-icon>logout</button>
+          </mat-menu>
+        </mat-button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <mat-sidenav-container style="height: 100vh; ">
+    <mat-sidenav #sidenav mode="side">
+  
+      <button mat-button class="menu-button">
+        <mat-icon>person</mat-icon>
+        <span (click)="openDialog()" >My Profile 
+          <!-- <p>{{d.UserName}}</p> -->
+        </span>
+      </button>
+      
+      <button mat-button class="menu-button" routerLink="/webpage-module/dashboard" (click)="sidenav.toggle()">
+        <mat-icon>dashboard</mat-icon>
+        <span >Dashboard</span>
+      </button>
+  
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>dashboard</mat-icon>
+        <span (click)="openDialog()">Create Project</span>
+      </button>
+  
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>info</mat-icon>
+        <span >About</span>
+      </button>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button">
+        <mat-icon>help</mat-icon>
+        <span >Help</span>
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+<!-- <router-outlet></router-outlet> -->

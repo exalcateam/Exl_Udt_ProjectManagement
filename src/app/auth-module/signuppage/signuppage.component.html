@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row h-100 justify-content-center align-items-center">
+        <mat-card class="d-flex p-4" >
+            <form [formGroup]="signupFormGroup" class="d-flex flex-column justify-content-center">
+                <!-- <div class="d-flex justify-content-center">
+                 <img src="../../../assets/default.png" style="width: 60px;align-items: center;">
+                </div> --> 
+                <h1>Sign Up</h1>
+                <mat-form-field class="a">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" type="text" >
+                    <!-- <mat-icon matSuffix>email</mat-icon> -->
+                    <mat-error
+                        *ngIf="signupFormGroup.get('username')?.touched && signupFormGroup.get('username')?.hasError('required')">
+                        Username is required.
+                    </mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="a">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="text" placeholder="eg:xyz@gmail.com">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error
+                        *ngIf="signupFormGroup.get('email')?.touched && signupFormGroup.get('email')?.hasError('required')">
+                        Email is required.
+                    </mat-error>
+                </mat-form-field><br>
+                <mat-form-field class="a">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" type="password" matInput placeholder="password">
+                    <mat-icon matSuffix>password</mat-icon>
+                    <mat-error
+                        *ngIf="signupFormGroup.get('password')?.touched && signupFormGroup.get('password')?.hasError('pattern')">
+                        The password Must be 8 to 10 characters in length.Must contain at least one letter and one
+                        number and a special character from !@#$%^&* ()_+.
+                    </mat-error>
+
+                </mat-form-field><br>
+                <div class="d-flex justify-content-center">
+                <button type="button"class="btn btn-primary btn-sm w-25 " (click)="onSubmit()" >Sign Up</button><br><br>
+                </div>
+                <div class="d-flex justify-content-center">
+                 <a routerLink="/auth-module/loginpage" style="color: black;">Have an account? Click here</a>
+                <!-- <a routerLink="/auth-module/openpg">openpg</a> -->
+            </div>
+            </form>
+        </mat-card>
+    </div>
+</div>

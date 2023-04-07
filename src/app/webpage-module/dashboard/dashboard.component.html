@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <mat-card class="card">
+        Chart
+      </mat-card>
+    </div>
+    <div class="col-6">
+      <mat-card class="card">
+        Overall
+      </mat-card>
+    </div>
+  </div>
+  <div class="row1">
+    <div class="col">
+      <!-- <mat-card> -->
+        <div class="d-flex mt-3">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter(input.value)" #input placeholder="search">
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <table mat-table [dataSource]="dataSource" class="row">
+          <ng-container matColumnDef="ProjectName">
+            <mat-header-cell *matHeaderCellDef class="header">Project Name</mat-header-cell>
+            <mat-cell *matCellDef="let task;let i=index" class="cell">
+              <button mat-button>{{task.ProjectName}}
+              </button>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="StartDate">
+            <mat-header-cell *matHeaderCellDef class="header">Startdate</mat-header-cell>
+            <mat-cell *matCellDef="let task" class="cell">{{task.StartDate}}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="StatusoftheProject">
+            <mat-header-cell *matHeaderCellDef class="header">Status of the Project</mat-header-cell>
+            <mat-cell *matCellDef="let task" class="cell">{{task.StatusoftheProject}}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="AssignedBy">
+            <mat-header-cell *matHeaderCellDef class="header">Assigned By</mat-header-cell>
+            <mat-cell *matCellDef="let task" class="cell">{{task.AssignedBy}}</mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Description">
+            <mat-header-cell *matHeaderCellDef class="header">Description</mat-header-cell>
+            <mat-cell *matCellDef="let task" class="cell">{{task.Description}}</mat-cell>
+          </ng-container>
+
+           <ng-container matColumnDef="Edit">
+            <mat-header-cell *matHeaderCellDef class="header">Edit</mat-header-cell>
+            <mat-cell *matCellDef="let task;let i=index" class="cell">
+              <button mat-icon-button title="Edit" (click)="openDialog1(task,i)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Delete" class="col-sm-1">
+            <mat-header-cell *matHeaderCellDef class="header">Delete</mat-header-cell>
+            <mat-cell *matCellDef="let task;let i=index;" class="cell">
+              <button mat-icon-button title="Delete" (click)="delete(task.Id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container> 
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+        </table>
+      <!-- </mat-card> -->
+    </div>
+  </div>
+</div>
+
+    
