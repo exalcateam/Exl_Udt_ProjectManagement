@@ -12,7 +12,14 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { MatDialogModule} from '@angular/material/dialog';
 import { EditComponent } from './edit/edit.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import { NgChartsModule } from 'ng2-charts';
+import { MatTooltipModule } from '@angular/material/tooltip'; 
+import { CdkTableExporterModule } from 'cdk-table-exporter';
+import {MatTableExporterModule } from 'mat-table-exporter';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TodolistComponent } from './todolist/todolist.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 const routes: Routes = [
   {
     path:'dashboard',
@@ -25,18 +32,24 @@ const routes: Routes = [
   {
     path:'edit',
     component:EditComponent
+  },
+  {
+    path:'todolist',
+    component:TodolistComponent
   }
 ]
 @NgModule({
   declarations: [
     DashboardComponent,
     AddprojectComponent,
-    EditComponent
+    EditComponent,
+    TodolistComponent
   ],
   imports: [
     
     CommonModule,
     RouterModule.forChild(routes),
+    NgChartsModule.forRoot(),
     MatIconModule,
     MatCardModule,
     MatInputModule,
@@ -47,7 +60,13 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatPaginatorModule
+    // CdkTableExporterModule,
+    // MatTableExporterModule
     
   ]
 })

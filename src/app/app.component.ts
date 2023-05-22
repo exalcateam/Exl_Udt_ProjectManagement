@@ -14,16 +14,20 @@ export class AppComponent {
   title = 'taskManagement';
   isLogin: boolean=true;
 c:any;
-d:any;
-  constructor(private _signupservice:SignupserviceService,private dialog: MatDialog){}
+b:any;
+  constructor(private _signupservice:SignupserviceService,private dialog: MatDialog){
+
+  // display username
+  this.c=localStorage.getItem('datas')
+  this.b=(JSON.parse(this.c))
+  console.log('detail:',this.b)
+  
+  }
   ngOnInit(): void {
     this._signupservice.loginvalueemitter.subscribe((value)=>{
       this.isLogin=value;
 
-      //display username
-      this.c=localStorage.getItem('data')
-      this.d=(JSON.parse(this.c))
-      console.log('detail:',this.d)
+    
     })
   }
   setting(){

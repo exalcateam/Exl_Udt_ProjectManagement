@@ -10,7 +10,7 @@
         <div>
         <mat-form-field>
             <mat-label>State date</mat-label>
-            <input matInput formControlName="StartDate" type="date">
+            <input matInput formControlName="StartDate" placeholder="dd/mm/yyyy">
         </mat-form-field></div> 
         <div>
         <mat-form-field>
@@ -19,14 +19,15 @@
         </mat-form-field></div>
         <div>
         <mat-form-field>
-            <mat-label>Assigned By</mat-label>
-            <input type="text" matInput formControlName="AssignedBy">
+            <mat-label>Assigned To</mat-label>
+            <input type="text" matInput formControlName="AssignedTo">
         </mat-form-field></div>
         <div>
         <mat-form-field>
             <mat-label>Description</mat-label>
             <input type="text" matInput formControlName="Description">
         </mat-form-field></div>
+     
     </form>
     <button mat-raised-button color="primary" [mat-dialog-close]="addproject.value" (click)="save()">save</button>
 </div>

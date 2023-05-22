@@ -1,0 +1,43 @@
+<header>{{project.ProjectName}}</header>
+<div class="container" >
+    <div class="row" > 
+        <div>
+            <!-- <button mat-button (click)="dashboard()" style="float: right;">
+                <mat-icon>close</mat-icon>
+            </button> -->
+        </div>
+        <div class="col-4">
+        <div style="text-align: center;font-size: large;">Project Details</div><br>
+            <div class="card">
+                <div class="content" style="margin: 15px;">
+                <p>Project Name:{{project.ProjectName}}</p>
+                <p>Startdate:{{project.StartDate}}</p>
+                <p>Status:{{project.StatusoftheProject}}</p>
+                <p>Assigned By:{{project.AssignedTo}}</p>
+                <p>Description:{{project.Description}}</p>
+                </div>
+            </div>
+        </div>
+</div>
+</div> 
+<mat-card>
+<form [formGroup]="addtodo"> 
+    <mat-form-field>
+        <mat-label>
+            add a todo list
+        </mat-label>
+        <input type="text" matInput formControlName="todolist" #todo>
+    </mat-form-field>
+    <button (click)="AddTodo(todo.value)">Add</button>
+</form>
+<form [formGroup]="checkform">
+    <div *ngFor="let data of d;let i =index">
+            <p><mat-checkbox matInput formControlName="tick" #ticks (click)="ticking(ticks)"
+                >{{data}}</mat-checkbox> 
+            </p>
+            <!-- <mat-checkbox></mat-checkbox> -->
+    </div>
+    <button (click)="calculate()">calculate</button>
+    <p>the value is {{this.cal}}</p>
+</form>  
+</mat-card>

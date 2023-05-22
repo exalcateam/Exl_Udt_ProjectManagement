@@ -1,6 +1,6 @@
 export class signupdetails{
     Id: any;
-    UserName:any;
+    Username:any;
     Email:any;
     Password:any;
    

@@ -1,16 +1,102 @@
-.row{
-    margin-top: 30px;
+.example-container {
+    height: 300px;
+    overflow: auto;
 
-    height: 60vh;
+}
+.dashboard{
+    padding: 25px 25px 0px;
+    width: 100% !important;
+    height: calc(100vh - 50px) !important;
+
+}
+.row{
+    width: 100%;
+    height: 80%;
+    margin-top: -5px;
+    box-shadow: 0 0 2px rgb(248, 247, 247);
+    border: 1px solid rgb(248, 247, 247);
+    border-radius: 10px;
+    // border-color: #4f86d8;
+}
+  table {
+    width: 100%;
+}
+
+// .row{
+//     margin-top: 20px;
+//     height: 60vh;
    
+// }
+.header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+ background-color: bisque;
 }
 
 .card{
-    margin-top: 25px;
-    width: 100%;
-    height: 50vh;
+    // margin-top: 25px;
+    width: 80%;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
 }
 .cell{
-    height: 15vh;
-    background-color: aqua;
+    height: 5vh;
+    background-color:#b7d5ff;
+}
+.chart{
+    width: 250px!important;
+    height: 250px!important;
+    align-items: center;
+        justify-content: center;
+}
+
+
+.button{
+    padding: 10px;
+    height:4vh;
+    background-color: #4f86d8
+}
+.search{
+    height: 4vh;
+}
+
+.table-css {
+    width: 100%;
+    min-height: 232px !important;
+    max-height: calc(100vh - 430px) !important;
+    overflow: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+
+    .table-style {
+        width: 100%;
+    }
+
+    tr.mat-header-row {
+        height: 56px !important;
+        background-color: #f9faf5 !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    tr.mat-row {
+        height: 48px !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+    th{
+        white-space: nowrap !important;
+        color: #404040!important;
+        font-weight: 500!important;
+        padding: 13px 0 13px 16px!important;
+        font-size: 12px;
+    }
+    td{
+        font-size: 12px!important;
+        font-weight: 600!important;
+    }
+    td.mat-cell, .mat-header-cell {
+        padding: 10px 0px 10px 20px !important;
+    }
 }

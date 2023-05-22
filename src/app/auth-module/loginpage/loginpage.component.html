@@ -7,21 +7,21 @@
                 <h1>Member Login</h1>
                 <mat-form-field class="a">
                     <mat-label>UserName</mat-label>
-                    <input matInput formControlName="UserName" type="text" >
-                    <mat-icon matSuffix>email</mat-icon>
+                    <input matInput formControlName="Username" type="text" >
+                    <mat-icon matSuffix>account_circle</mat-icon>
                     <mat-error
-                        *ngIf="loginFormGroup.get('UserName')?.touched && loginFormGroup.get('UserName')?.hasError('required')">
+                        *ngIf="loginFormGroup.get('Username ')?.touched && loginFormGroup.get('Username ')?.hasError('required')">
                         UserName is required.
                     </mat-error>
                 </mat-form-field><br>
                 <mat-form-field class="a">
                     <mat-label>Password</mat-label>
-                    <input formControlName="password" type="password" matInput placeholder="password">
+                    <input formControlName="Password" type="password" matInput placeholder="Password">
                     <mat-icon matSuffix>password</mat-icon>
                     <mat-error
-                        *ngIf="loginFormGroup.get('password')?.touched && loginFormGroup.get('password')?.hasError('pattern')">
-                        The password Must be 8 to 10 characters in length.Must contain at least one letter and one
-                        number and a special character from !@#$%^&* ()_+.
+                        *ngIf="loginFormGroup.get('Password')?.touched && loginFormGroup.get('Password')?.hasError('pattern')">
+                        <!-- The password Must be 8 to 10 characters in length.Must contain at least one letter and one
+                        number and a special character from !@#$%^&* ()_+. -->
                     </mat-error>
 
                 </mat-form-field><br>

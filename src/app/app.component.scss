@@ -1,21 +1,8 @@
-h1{
-    text-align: center;
-    margin: 20px;
-     font-size: 40px;
-     color: blue;
-     color: black;
-}
 .mat-sidenav {
-    width: 200px;
+    width: 250px;
     padding:15px;
-}
-.mat-drawer { 
     background-color: #4f86d8;
-    color:white
-}
-.main-content {
-    padding:20px;
-}
+ }
 .toolbar-spacer {
     flex: 5px;
 }
@@ -25,40 +12,22 @@ h1{
     position: -webkit-sticky;
     top: 0;
     z-index: 1000;
-    
+ 
 }
 .menu-button {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 15px;
+}   
+span{
+  font-size: medium;
 }
-.mat-icon {
-        margin-right: 9px;
-        size: 20%;
-    
-    }
-    
-.container-fluid{
-    // background-image: url('../../../../../src/assets/login.jpg');
-    // background-size: cover;
-    // display: flex;
-    // flex-direction: column;
-    // background-color: pink;
-    height: 90vh;
+.icon{
+    width: 25px!important;
+    height: 25px!important;
+ 
+    font-size:25px !important;
+ 
 }
 
-.grid{
-    text-align: center;
-    padding: 50px;
-    height: 80vh;
-    margin: 40px 450px;
-    border: groove;
-    background-color: rgba(224, 194, 194, 0.473);
-    
-}
-h1{
-    font-size: x-large;
-    margin: 50px;
-}

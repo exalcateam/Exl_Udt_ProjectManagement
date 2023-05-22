@@ -13,6 +13,9 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UsermanagementComponent } from './usermanagement/usermanagement.component';
+import {MatTableModule} from '@angular/material/table';
+import { AdduserComponent } from './adduser/adduser.component';
 const routes: Routes = [
 {
   path:'forgotpassword',
@@ -31,6 +34,14 @@ const routes: Routes = [
   component:SignuppageComponent
 },
 {
+  path:'usermanagement',
+  component:UsermanagementComponent
+},
+{
+  path:'adduser',
+  component:AdduserComponent
+},
+{
   path:'',
   redirectTo:'homepage',
   pathMatch:'full'
@@ -42,6 +53,8 @@ const routes: Routes = [
     SignuppageComponent,
     LoginpageComponent,
     ForgotpasswordComponent,
+    UsermanagementComponent,
+    AdduserComponent,
 
 ],
   imports: [
@@ -54,7 +67,8 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
     
    
   ]
